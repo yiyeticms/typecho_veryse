@@ -17,17 +17,6 @@
 
 <?php $this->content(); ?>
 
-<hr />
-
-<h3 id="elsewhere">Elsewhere&hellip;</h3>
-
-<ul>
-<li><a href="#">Email</a></li>
-<li><a href="#">GitHub</a></li>
-<li><a href="#">LinkedIn</a></li>
-<li><a href="#">Twitter</a></li>
-</ul>
-
     </section>
  
 </article>

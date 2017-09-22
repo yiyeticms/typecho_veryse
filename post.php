@@ -6,13 +6,13 @@
 
     <header>
                
-        <div class="post-meta tags">
+        <!--<div class="post-meta tags">
           
         <?php _e('tags in：'); ?>
         
         <?php $this->tags('  ', true, '暂无标签'); ?>        
           
-        </div>
+        </div>-->
 
         <h1 class="post-title"><?php $this->title() ?></h1>
 
@@ -58,10 +58,10 @@
 
     <footer class="post-footer">
         <section class="author">
-    <div class="authorimage" style="background: url(https://yiyeti.oss-cn-shanghai.aliyuncs.com/usr/uploads/logo.png)"></div>
+    <div class="authorimage" style="background: url(<?php $this->options->logoUrl(); ?>)"></div>
     <p class="attr">AUTHOR</p>
-    <h4>YiYeTi</h4>
-    <p class="bio"> Author introduction <a href="https://yiyeti.cc">A freelance worker who loves the Internet</a></p>
+    <h4><?php $this->author->screenName(); ?></h4>
+    <p class="bio"> About author <?php $this->options->gyw(); ?></p>
 </section>
 
     </footer>

@@ -16,7 +16,7 @@
 
     <!-- RSS autodiscovery -->
     
-    <link rel="shortcut icon" href="https://yiyeti.oss-cn-shanghai.aliyuncs.com/usr/uploads/favicon.ico">
+    <link rel="shortcut icon" href="<?php $this->options->ico(); ?>">
 
     <link rel="stylesheet" href="<?php $this->options->themeUrl('img/normalize.min.css'); ?>">
 
@@ -36,7 +36,7 @@
 
     <header id="site-head">
 
-  <a id="blog-logo" href="<?php $this->options->siteUrl(); ?>"><div class="bloglogo" style="background: url(https://yiyeti.oss-cn-shanghai.aliyuncs.com/usr/uploads/logo.png)"></div></a>
+  <a id="blog-logo" href="<?php $this->options->siteUrl(); ?>"><div class="bloglogo" style="background: url(<?php $this->options->logoUrl(); ?>)"></div></a>
 	
 	<h1 class="blog-title"><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></h1>
 	
