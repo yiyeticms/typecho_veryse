@@ -3,7 +3,7 @@
  * 这是一款极简的单栏Typecho主题。
  * @package veryse Theme 
  * @author 一夜涕
- * @version 1.1
+ * @version 1.0
  * @link https://yiyeti.cc
  */
 

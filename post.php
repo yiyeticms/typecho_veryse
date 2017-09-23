@@ -39,12 +39,12 @@
 
     <p class="info prompt">Share</p>
 
-    <a href="http://service.weibo.com/share/share.php?url=<?php $this->permalink() ?>&amp;appkey=<?php $this->options->title();?>/&amp;title=<?php $this->title() ?>&amp;" title="Share on Weibo"
+    <a href="http://service.weibo.com/share/share.php?url=<?php $this->permalink() ?>/&appkey=<?php $this->options->title(); ?>/&title=<?php $this->title() ?>&pic=<?php showThumbnail($this); ?>" title="Share on Weibo"
         onclick="window.open(this.href, 'weibo-share', 'width=550,height=235');return false;">
         <i class="fa fa-2x fa-fw fa-weibo"></i> <span class="hidden">weibo</span>
     </a>
 
-    <a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<?php $this->permalink() ?>&amp;title=<?php $this->title() ?>&amp;site=<?php $this->options->title();?>/&amp;" title="Share on Qzone"
+    <a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<?php $this->permalink() ?>&title=<?php $this->title() ?>&site=<?php $this->options->title(); ?>/&pics=<?php showThumbnail($this); ?>" title="Share on Qzone"
         onclick="window.open(this.href, 'qzone-share','width=580,height=296');return false;">
         <i class="fa fa-2x fa-fw fa-star" style="margin-left: -8px"></i> <span class="hidden">qzone</span>
     </a>
@@ -63,10 +63,8 @@
     <h4><?php $this->author->screenName(); ?></h4>
     <p class="bio"> About author <?php $this->options->gyw(); ?></p>
 </section>
-
     </footer>
     
 </article>
-
     </main>
 <?php $this->need('footer.php'); ?>

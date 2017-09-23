@@ -21,7 +21,10 @@
 <script src="https://yiyeti.oss-cn-shanghai.aliyuncs.com/usr/uploads/jquery.min.js"></script>
 <script src="<?php $this->options->themeUrl('img/default.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('img/highlight.min.js'); ?>"></script>
-
+<?php if ($this->options->Instantclick == 'able'): ?>
+<script src="<?php $this->options->themeUrl('img/instantclick.min.js'); ?>" data-no-instant></script>
+<script data-no-instant>InstantClick.init();</script>
+<?php endif; ?>
 </body>
 </html>
 <?php if ($this->options->Compress == 'able'): ?>

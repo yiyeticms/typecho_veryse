@@ -1,6 +1,21 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
+/** 输出文章缩略图 */ 
+function showThumbnail($widget)
+{ 
+    $attach = $widget->attachments(1)->attachment;
+    $pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i'; 
+    
+if (preg_match_all($pattern, $widget->content, $thumbUrl)) {
+         echo $thumbUrl[1][0];
+    } else     if ($attach->isImage) {
+      echo $attach->url; 
+    } else {
+        echo $random;
+    }
+}
+
 function themeConfig($form) {
 
         $Compress= new Typecho_Widget_Helper_Form_Element_Radio('Compress',
@@ -9,6 +24,13 @@ function themeConfig($form) {
         ),
         'disable', _t('是否启用HTML代码压缩功能'), _t('默认禁止，启用则会gzip压缩HTML代码'));
     $form->addInput($Compress);
+    
+    $Instantclick= new Typecho_Widget_Helper_Form_Element_Radio('Instantclick',
+        array('able' => _t('启用'),
+            'disable' => _t('禁止'),
+        ),
+        'disable', _t('是否启用页面预加载功能'), _t('默认禁止，启用则会提升网站访问速度'));
+    $form->addInput($Instantclick);
 
     $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('你的头像地址【必填】'), _t('在这里填入一个图片URL地址, 以在网站标题/文章内页底部前加上一个自己的头像'));
     $form->addInput($logoUrl); 
